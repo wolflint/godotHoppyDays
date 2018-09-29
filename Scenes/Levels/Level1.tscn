@@ -4,7 +4,9 @@
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/PlatformTiles.tres" type="TileSet" id=3]
 
-[node name="Level1" type="Node2D" index="0"]
+[node name="Level1" type="Node2D"]
+
+_sections_unfolded = [ "Pause" ]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -12,8 +14,11 @@ position = Vector2( 461.231, 631.636 )
 
 [node name="Camera2D" parent="Player" index="2" instance=ExtResource( 2 )]
 
+zoom = Vector2( 1.5, 1.5 )
+limit_left = 160
+limit_bottom = 3000
 smoothing_enabled = true
-_sections_unfolded = [ "Smoothing" ]
+_sections_unfolded = [ "Limit", "Smoothing" ]
 
 [node name="TileMap" type="TileMap" parent="." index="1"]
 
@@ -33,6 +38,6 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -65501, 0, 0, 131101, 7, 0, 327703, 7, 0, 458769, 7, 0, 589836, 7, 0, 786437, 3, 0, 1114176, 7, 0, 1310778, 7, 0, 1507369, 3, 0, 1507373, 3, 0, 1507382, 536870915, 0, 1507401, 7, 0 )
+tile_data = PoolIntArray( -327595, 3, 0, -262071, 7, 0, -262045, 7, 0, -196548, 3, 0, -65510, 7, 0, -65502, 7, 0, -65484, 7, 0, 65555, 7, 0, 65576, 7, 0, 131161, 7, 0, 196655, 7, 0, 196681, 3, 0, 327694, 7, 0, 327744, 3, 0, 327778, 3, 0, 458790, 7, 0, 524309, 3, 0, 524346, 7, 0, 589910, 3, 0, 655373, 3, 0, 655435, 7, 0, 655457, 7, 0, 720933, 3, 0, 786436, 3, 0, 786460, 7, 0, 852020, 3, 0, 852033, 3, 0, 1048616, 7, 0, 1114214, 7, 0, 1179672, 3, 0, 1179699, 7, 0, 1245199, 7, 0, 1245249, 3, 0, 1245275, 3, 0, 1310801, 7, 0, 1376261, 3, 0, 1507367, 7, 0, 1572896, 7, 0, 1572912, 3, 0, 1638472, 3, 0, 1638494, 7, 0, 1638501, 3, 0, 1703953, 3, 0, 1835065, 7, 0, 1900611, 7, 0, 2031618, 3, 0, 2097182, 7, 0, 2097240, 3, 0, 2097241, 3, 0, 2162701, 7, 0, 2162730, 3, 0, 2228282, 3, 0, 2228299, 3, 0, 2228320, 7, 0, 2424900, 7, 0, 2490389, 3, 0, 2490415, 7, 0, 2555988, 7, 0, 2621449, 3, 0, 2621450, 3, 0, 2621499, 7, 0, 2687013, 7, 0, 2752609, 3, 0, 2818116, 3, 0, 2883635, 3, 0, 2883673, 7, 0, 2949144, 3, 0 )
 
 
