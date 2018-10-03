@@ -3,10 +3,13 @@ extends KinematicBody2D
 const SPEED = 750
 const GRAVITY = 3600
 const UP = Vector2(0, -1)
-const JUMP_SPEED = -2000
+const JUMP_SPEED = -2500
 
 var motion = Vector2()
 export var world_limit = 3000
+
+func _ready():
+	Global.Player = self
 
 func _physics_process(delta):
 	update_motion(delta)
@@ -26,6 +29,7 @@ func update_animation(motion):
 	$AnimatedSprite.update(motion)
 
 
+
 func fall(delta):
 	if is_on_floor() or is_on_ceiling():
 		motion.y = 0
@@ -36,7 +40,7 @@ func fall(delta):
 		motion.y += GRAVITY * delta
 
 	if position.y > world_limit:
-		end_game()
+		Global.GameState.end_game()
 
 
 func run():
@@ -52,6 +56,7 @@ func jump():
 	if is_on_floor() and Input.is_action_pressed("ui_up"):
 		motion.y = JUMP_SPEED
 
+func hurt():
+	motion.y = -5000
+	print("hurt jump")
 
-func end_game():
-	get_tree().change_scene("res://Scenes/GameOver.tscn")
