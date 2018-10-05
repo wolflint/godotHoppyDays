@@ -13,7 +13,7 @@ func _ready():
 
 func hurt():
 	motion.y = JUMP_SPEED
-	print("3")
+	Global.hurt_sfx.play()
 
 
 func _physics_process(delta):
@@ -61,5 +61,6 @@ func run():
 func jump():
 	if is_on_floor() and Input.is_action_pressed("ui_up"):
 		motion.y = JUMP_SPEED
+		Global.jump_sfx.play()
 
 
