@@ -57,6 +57,6 @@ func jump():
 		motion.y = JUMP_SPEED
 
 func hurt():
-	motion.y = -5000
-	print("hurt jump")
+	print("3")
+	motion.y = JUMP_SPEED
 

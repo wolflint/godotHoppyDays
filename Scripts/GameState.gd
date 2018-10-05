@@ -9,7 +9,7 @@ func _ready():
 
 func hurt():
 	lives -=1
-	print("life - 1")
+	print("2")
 	Global.Player.hurt()
 	if lives < 0:
 		end_game()
