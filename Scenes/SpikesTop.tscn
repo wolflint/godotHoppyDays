@@ -5,7 +5,6 @@
 
 [node name="SpikesTop" type="Area2D" index="0"]
 
-position = Vector2( -20.9323, -1.28157 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -15,7 +14,7 @@ collision_layer = 4
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Audio Bus", "Collision", "Material", "Pickable", "Transform", "Visibility", "Z Index" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -28,7 +27,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
 
-visible = false
 build_mode = 0
 polygon = PoolVector2Array( -47.3783, 25.9973, -33.993, -26.9742, 32.7909, -27.1166, 46.3186, 25.8549 )
 
