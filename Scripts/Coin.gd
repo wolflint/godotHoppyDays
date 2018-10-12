@@ -1,9 +1,13 @@
 extends AnimatedSprite
 
+var taken = false
+
 func _on_body_entered(body):
-	Global.GameState.coin_up()
-	$AnimationPlayer.play("die")
-	Global.coin_sfx.play()
+	if not taken:
+		taken = true
+		Global.GameState.coin_up()
+		$AnimationPlayer.play("die")
+		$AudioStreamPlayer.play()
 
 func die():
 	queue_free()
