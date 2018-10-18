@@ -5,6 +5,7 @@
 
 [node name="Camera2D" type="Camera2D"]
 
+position = Vector2( -4.20508, 12.6143 )
 anchor_mode = 1
 rotating = false
 current = true

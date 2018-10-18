@@ -48,6 +48,10 @@ func fall(delta):
 	motion.y = clamp(motion.y, (JUMP_SPEED * JUMP_BOOST), -JUMP_SPEED)
 
 
+func jump():
+	if is_on_floor() and Input.is_action_pressed("ui_up"):
+		motion.y = JUMP_SPEED
+		Global.jump_sfx.play()
 
 func run():
 	if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left") and not is_on_ceiling():
@@ -58,10 +62,6 @@ func run():
 		motion.x = 0
 
 
-func jump():
-	if is_on_floor() and Input.is_action_pressed("ui_up"):
-		motion.y = JUMP_SPEED
-		Global.jump_sfx.play()
 
 func boost():
 	motion.y = JUMP_SPEED * JUMP_BOOST
